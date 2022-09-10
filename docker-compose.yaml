@@ -1,0 +1,34 @@
+# Composer file for local enviroment only
+
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./Processwire
+      dockerfile: Dockerfile
+      args:
+        DB_HOST: ${DB_HOST}
+        DB_DATABASE: ${DB_DATABASE}
+        DB_USERNAME: ${DB_USERNAME}
+        DB_PASSWORD: ${DB_PASSWORD}
+        PW_VERSION: ${PW_VERSION}
+        PHP_VERSION: ${PHP_VERSION}
+        PLATFORM: ${PLATFORM}
+    ports:
+      - '80:80'
+    volumes:
+      - ./site:/var/www/html/site/
+  
+  database:
+    build:
+      context: ./Database
+      args:
+        DB_HOST: ${DB_HOST}
+        DB_DATABASE: ${DB_DATABASE}
+        DB_USERNAME: ${DB_USERNAME}
+        DB_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./Database/dbData:/var/lib/mysql

@@ -1,0 +1,19 @@
+# ignore macos filesystem
+**/.DS_Store
+
+# ignore database
+/Database/dbData
+
+# keep 
+# .gitkeep files
+!**/.gitkeep
+# htaccess
+!**/.htaccess
+
+# Ignore Processwire /site/assets 
+/site/config-dev.php
+/site/assets/cache
+/site/assets/logs
+/site/assets/sessions
+/site/assets/files
+/site/assets/wire

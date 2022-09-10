@@ -1,0 +1,18 @@
+# ignore macos filesystem
+**/.DS_Store
+
+# ignore database
+/Database/dbData
+
+# keep 
+# .gitkeep files
+!**/.gitkeep
+# htaccess
+!**/.htaccess
+
+# Ignore Processwire /site/assets 
+Processwire/site/assets/cache
+Processwire/site/assets/logs
+Processwire/site/assets/sessions
+Processwire/site/assets/files
+Processwire/site/assets/wire
