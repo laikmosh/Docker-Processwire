@@ -5,12 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Listen for Xdebug",
+      "name": "Processwire debugger",
       "type": "php",
       "request": "launch",
       "port": 9003,
       "pathMappings": {
-        "/var/www/html": "${workspaceFolder}/Processwire/site"
+        "/var/www/html/site": "${workspaceFolder}/site",
+        "/var/www/html/wire": "${workspaceFolder}/site/assets/wire"
       }
     },
   ]
