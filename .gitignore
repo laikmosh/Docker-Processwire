@@ -11,6 +11,7 @@
 !**/.htaccess
 
 # Ignore Processwire /site/assets 
+/site
 /site/assets/cache
 /site/assets/logs
 /site/assets/sessions
